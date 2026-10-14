@@ -1,10 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
+<style>
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+</style>
+
 <% content_for :title, "Movies" %>
 
 <h1>Movies</h1>
 
-<table>
+<table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
       <th>Title</th>
