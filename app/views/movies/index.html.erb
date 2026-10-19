@@ -43,4 +43,15 @@
   </tfoot>
 </table>
 
-<%= link_to "New movie", new_movie_path %>
+<%= link_to "New movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %>
+<%= link_to "Sort by Title in Ascending order", movies_path(sort: "title" direction: "asc") %>
+<%= link_to "Sort by Title in Descending order", movies_path(sort: "title" direction: "desc") %>
+<%= link_to "Sort by Release Date in Ascending order", movies_path(sort: "release_date" direction: "asc") %>
+<%= link_to "Sort by Release Date in Descending order", movies_path(sort: "release_date" direction: "desc") %>
+<%= link_to "Sort by Rating in Ascending order", movies_path(sort: "rating" direction: "asc") %>
+<%= link_to "Sort by Rating in Descending order", movies_path(sort: "rating" direction: "desc") %>
+
+
+
+
+
