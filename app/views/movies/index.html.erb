@@ -37,13 +37,13 @@ th.sorted-desc {
       </th>
       <th class="<%= 'sorted-' + params[:direction] if params[:sort] == 'release_date' %>">
         Release Date
-        <% if params[:sort] == 'title' %>
+        <% if params[:sort] == 'release_date' %>
           <%= params[:direction] == 'asc' ? '▲' : '▼' %>
       <% end %>
       </th>
       <th class="<%= 'sorted-' + params[:direction] if params[:sort] == 'rating' %>">
         Rating
-        <% if params[:sort] == 'title' %>
+        <% if params[:sort] == 'rating' %>
           <%= params[:direction] == 'asc' ? '▲' : '▼' %>
       <% end %>
       </th>
