@@ -9,18 +9,44 @@
     padding: 8px;
     text-align: left;
   }
+
+  th.sorted-asc {
+  background-color: green;
+}
+
+th.sorted-desc {
+  background-color: red;
+}
 </style>
 
 <% content_for :title, "Movies" %>
 
 <h1>Movies</h1>
 
+<% sorted_by = params[:sort].presence || "title" %>
+<% sort_direction = params[:direction].presence || "asc" %>
+
 <table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Release Date</th>
-      <th>Rating</th>
+      <th class="<%= 'sorted-' + params[:direction] if params[:sort] == 'title' %>">
+        Title
+        <% if params[:sort] == 'title' %>
+          <%= params[:direction] == 'asc' ? '▲' : '▼' %>
+      <% end %>
+      </th>
+      <th class="<%= 'sorted-' + params[:direction] if params[:sort] == 'release_date' %>">
+        Release Date
+        <% if params[:sort] == 'title' %>
+          <%= params[:direction] == 'asc' ? '▲' : '▼' %>
+      <% end %>
+      </th>
+      <th class="<%= 'sorted-' + params[:direction] if params[:sort] == 'rating' %>">
+        Rating
+        <% if params[:sort] == 'title' %>
+          <%= params[:direction] == 'asc' ? '▲' : '▼' %>
+      <% end %>
+      </th>
       <th>Link</th>
     </tr>
   </thead>
@@ -44,13 +70,30 @@
 </table>
 
 <%= link_to "New movie", new_movie_path(sort: params[:sort], direction: params[:direction]) %>
-<%= link_to "Sort by Title in Ascending order", movies_path(sort: "title", direction: "asc") %>
-<%= link_to "Sort by Title in Descending order", movies_path(sort: "title", direction: "desc") %>
-<%= link_to "Sort by Release Date in Ascending order", movies_path(sort: "release_date", direction: "asc") %>
-<%= link_to "Sort by Release Date in Descending order", movies_path(sort: "release_date", direction: "desc") %>
-<%= link_to "Sort by Rating in Ascending order", movies_path(sort: "rating", direction: "asc") %>
-<%= link_to "Sort by Rating in Descending order", movies_path(sort: "rating", direction: "desc") %>
 
+<div>
+  <%= link_to "Sort by Title in Ascending order", movies_path(sort: "title", direction: "asc") %>
+</div>
+
+<div>
+  <%= link_to "Sort by Title in Descending order", movies_path(sort: "title", direction: "desc") %>
+</div>
+
+<div>
+  <%= link_to "Sort by Release Date in Ascending order", movies_path(sort: "release_date", direction: "asc") %>
+</div>
+
+<div>
+  <%= link_to "Sort by Release Date in Descending order", movies_path(sort: "release_date", direction: "desc") %>
+</div>
+
+<div>
+  <%= link_to "Sort by Rating in Ascending order", movies_path(sort: "rating", direction: "asc") %>
+</div>
+
+<div>
+  <%= link_to "Sort by Rating in Descending order", movies_path(sort: "rating", direction: "desc") %>
+</div>
 
 
 

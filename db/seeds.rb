@@ -20,7 +20,7 @@ more_movies = [
   {:title => 'CODA', :rating => 'PG-13',
     :release_date => '13-Aug-2021'},
   {:title => 'Avatar', :rating => 'PG-13',
-    :release_date => '10-Ded-2009'},
+    :release_date => '10-Dec-2009'},
   {:title => 'The Avengers', :rating => 'PG-13',
     :release_date => '04-May-2012'},
   {:title => 'Facing the Giants', :rating => 'PG',
