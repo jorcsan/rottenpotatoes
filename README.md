@@ -1,24 +1,5 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## This is program assignment 2:
+ 
+I built a rails application named rotten potatoes.
+It is hosted on a heroku server here 
+[Visit RottenPotatoes](https://rottenpotatoes-jorcsan-cc115d25a047.herokuapp.com/)
