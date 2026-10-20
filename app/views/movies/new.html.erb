@@ -1,15 +1,53 @@
+
 <% content_for :title, "New movie" %>
 
-<h1>New movie</h1>
+<style>
+  .movie-form {
+    max-width: 600px;
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
 
-<%= render "form", movie: @movie %>
+  .movie-form input,
+  .movie-form select,
+  .movie-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    box-sizing: border-box;
+  }
 
-<br>
+  .movie-form input[type="submit"] {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+  }
+</style>
 
-<div>
-  <%= link_to "Back to movies",
-    movies_path(
-      sort: params[:sort],
-      direction: params[:direction]
-    ) %>
+<h1 style="text-align: center; background-color: red; color: white; padding: 30px; margin: 0;">
+  🥔 RottenPotatoes
+</h1>
+
+<h2 style="text-align: center; background-color: white; color: black; padding: 30px; margin: 0;">
+  New Movie
+</h2>
+
+<div class="movie-form">
+  <%= render "form", movie: @movie %>
+
+  <div style="margin-top: 15px;">
+    <%= link_to "Back to movies",
+      movies_path(
+        sort: params[:sort],
+        direction: params[:direction]
+      ) %>
+  </div>
 </div>
