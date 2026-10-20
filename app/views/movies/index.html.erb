@@ -21,7 +21,13 @@ th.sorted-desc {
 
 <% content_for :title, "Movies" %>
 
-<h1>Movies</h1>
+<h1 style="text-align: center; background-color: red; color: white; padding: 20px;">
+  🥔 RottenPotatoes
+</h1>
+
+<h2 style="text-align: center; background-color: red; color: white; padding: 20px;">
+   Movies
+</h2>
 
 <% sorted_by = params[:sort].presence || "title" %>
 <% sort_direction = params[:direction].presence || "asc" %>
